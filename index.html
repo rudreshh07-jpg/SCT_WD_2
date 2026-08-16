@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Chrono — responsive stopwatch web application.">
+<title>Chrono — Stopwatch</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="page-shell">
+<header class="topbar">
+<a class="logo" href="#"><span class="logo-icon">◷</span><span>chrono</span></a>
+<span class="status"><i></i> precision timer</span>
+</header>
+
+<main class="app">
+<section class="intro">
+<p class="eyebrow">TIME / 02</p>
+<h1>Measure the<br><em>moment.</em></h1>
+<p class="subtitle">A focused stopwatch for tracking intervals, laps, and personal records.</p>
+</section>
+
+<section class="timer-card" aria-label="Stopwatch">
+<div class="timer-top"><span id="stateLabel">READY</span><span id="lapCount">00 LAPS</span></div>
+<div class="display" aria-live="polite">
+<span id="minutes">00</span><b>:</b><span id="seconds">00</span><small>.</small><span id="centiseconds">00</span>
+</div>
+<div class="progress-track"><span id="progress"></span></div>
+<div class="controls">
+<button class="control secondary" id="resetBtn" type="button">Reset</button>
+<button class="control primary" id="startBtn" type="button">Start</button>
+<button class="control secondary" id="lapBtn" type="button" disabled>Lap</button>
+</div>
+</section>
+
+<section class="laps-panel">
+<div class="panel-heading">
+<div><p class="eyebrow">SESSION LOG</p><h2>Lap times</h2></div>
+<button id="clearBtn" class="clear-btn" type="button" disabled>Clear all</button>
+</div>
+<div id="laps" class="laps-empty"><span class="empty-mark">＋</span><p>Your recorded laps will appear here.</p></div>
+</section>
+</main>
+
+<footer><span>CHRONO / STOPWATCH</span><span>Built with HTML · CSS · JavaScript</span></footer>
+</div>
+<script src="script.js"></script>
+</body>
+</html>
